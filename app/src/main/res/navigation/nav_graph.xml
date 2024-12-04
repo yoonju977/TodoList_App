@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/taskListFragment">
+
+    <!-- Task List Fragment -->
+    <fragment
+        android:id="@+id/taskListFragment"
+        android:name="com.example.todolist.TaskListFragment"
+        android:label="Task List">
+        <!-- Navigation Action to Task Edit Fragment -->
+        <action
+            android:id="@+id/action_taskListFragment_to_taskEditFragment"
+            app:destination="@id/taskEditFragment" />
+    </fragment>
+
+    <!-- Task Edit Fragment -->
+    <fragment
+        android:id="@+id/taskEditFragment"
+        android:name="com.example.todolist.TaskEditFragment"
+        android:label="Edit Task">
+        <!-- Navigation Action to Task Detail Fragment -->
+        <action
+            android:id="@+id/action_taskEditFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+
+    <!-- Task Detail Fragment -->
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="com.example.todolist.TaskDetailFragment"
+        android:label="Task Detail" />
+</navigation>
